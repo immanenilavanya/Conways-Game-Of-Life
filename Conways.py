@@ -37,16 +37,3 @@ def commands():
                 
             else:
                 grid[i][j] = life[i][j]
-                
-def neighbors(x, y, life):
-    count = 0
-    for i in range(-1, 2):
-        for j in range(-1, 2):
-            row = x+i
-            column = y+j
-            if column > len(life[0]) - 1:
-                column = 0
-            if row > len(life) - 1:
-                row = 0
-            count += life[row][column]
-    return count - life[x][y]
