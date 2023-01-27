@@ -51,6 +51,39 @@ def neighbors(x, y, life):
             count += life[row][column]
     return count - life[x][y]
 
+def buttons():
+    global run
+
+    start = pygame.Surface([60, 60])
+    start.fill((46, 179, 55))
+    display.blit(start, (620, 20))
+    mouse_pos = pygame.mouse.get_pos()
+
+    if 620 < mouse_pos[0] < 620+60 and 20 < mouse_pos[1] < 20+60:
+        pygame.draw.rect(display, (255, 255, 255), (620, 20, 60, 60), 5)
+        if pygame.mouse.get_pressed()[0]:
+            run = True
+
+    stop = pygame.Surface([60, 60])
+    stop.fill((173, 35, 35))
+    display.blit(stop, (620, 100))
+
+    if 620 < mouse_pos[0] < 620 + 60 and 100 < mouse_pos[1] < 60 + 60:
+        pygame.draw.rect(display, (255, 255, 255), (620, 100, 60, 60), 5)
+        if pygame.mouse.get_pressed()[0]:
+            run = False
+            
+    reset = pygame.Surface([60, 60])
+    reset.fill((0, 0, 200))
+    display.blit(reset, (620, 180))
+
+    if 620 < mouse_pos[0] < 620 + 60 and 180 < mouse_pos[1] < 180 + 60:
+        pygame.draw.rect(display, (255, 255, 255), (620, 180, 60, 60), 5)
+        if pygame.mouse.get_pressed()[0]:
+            run = False
+            resetGrid()
+            
 def resetGrid():
     global grid
     grid = [[random.choice([0, 1]) for i in range(30)] for j in range(30)]
+    
