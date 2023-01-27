@@ -24,3 +24,15 @@ def layout():
         pygame.draw.line(display, (0, 0, 0), ((i * 20), 0), (i * 20, 600), 2)
     for j in range(len(grid[0]) + 1):
         pygame.draw.line(display, (0, 0, 0), (0, (j * 20)), (600, j * 20), 2)
+    
+def commands():
+    life = [list(i) for i in grid]
+    for i in range(len(grid)):
+        for j in range(len(grid[i])):
+            neighbor_cells = neighbors(i, j, life)
+            if life[i][j] == 0 and neighbor_cells == 3:
+                grid[i][j] = 1
+            elif life[i][j] == 1 and (neighbor_cells < 2 or neighbor_cells > 3):
+                grid[i][j] = 0
+            else:
+                grid[i][j] = life[i][j]
