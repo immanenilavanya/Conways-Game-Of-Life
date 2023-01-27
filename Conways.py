@@ -87,3 +87,20 @@ def resetGrid():
     global grid
     grid = [[random.choice([0, 1]) for i in range(30)] for j in range(30)]
     
+while not done:
+    display.fill(0)
+
+    cell_layout()
+    if run:
+        commands()
+    layout()
+
+    buttons()
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True
+            pygame.mouse.get_pos()
+
+    pygame.display.flip()
+    delay.tick(10)
