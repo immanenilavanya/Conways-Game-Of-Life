@@ -50,3 +50,7 @@ def neighbors(x, y, life):
                 row = 0
             count += life[row][column]
     return count - life[x][y]
+
+def resetGrid():
+    global grid
+    grid = [[random.choice([0, 1]) for i in range(30)] for j in range(30)]
