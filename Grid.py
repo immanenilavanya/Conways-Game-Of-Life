@@ -6,7 +6,7 @@ display = pygame.display.set_mode(size)
 
 delay = pygame.time.Clock()
 done = False
-
+#jdbindf
 
 grid = [[random.choice([False, True]) for i in range(30)] for j in range(30)]
 run = False
