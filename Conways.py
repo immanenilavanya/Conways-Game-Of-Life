@@ -3,6 +3,7 @@ import random
 
 size = (700, 600)
 display = pygame.display.set_mode(size)
+pygame.display.set_caption("Conway's Game of Life")
 
 delay = pygame.time.Clock()
 done = False
