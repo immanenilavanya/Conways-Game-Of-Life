@@ -55,7 +55,7 @@ def buttons():
     global run
 
     start = pygame.Surface([60, 60])
-    start.fill((46, 179, 55))
+    start.fill((48, 186, 143))
     display.blit(start, (620, 20))
     mouse_pos = pygame.mouse.get_pos()
 
@@ -65,7 +65,7 @@ def buttons():
             run = True
 
     stop = pygame.Surface([60, 60])
-    stop.fill((173, 35, 35))
+    stop.fill((222, 165, 164))
     display.blit(stop, (620, 100))
 
     if 620 < mouse_pos[0] < 620 + 60 and 100 < mouse_pos[1] < 60 + 60:
@@ -74,7 +74,7 @@ def buttons():
             run = False
             
     reset = pygame.Surface([60, 60])
-    reset.fill((0, 0, 200))
+    reset.fill((80, 120, 160))
     display.blit(reset, (620, 180))
 
     if 620 < mouse_pos[0] < 620 + 60 and 180 < mouse_pos[1] < 180 + 60:
