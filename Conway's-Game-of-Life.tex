@@ -1,0 +1,109 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\graphicspath{ {./images/} }
+\mode<presentation>
+{
+\usetheme{Antibes}
+\usecolortheme{dolphin}
+\usefonttheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}[numbered]
+}
+\usepackage[english]{babel}
+\section{Team Introduction}
+\title{ Conway's game of life}
+\author[Svecw]{I.Lakshmi Lavanya : 21B01A0562 : cse \\ K. Bharathi :\;\;\;\;\;\;\; \;\;\;21B01A0565 : cse \\ G. loshmi : \;\;\;\;\;\;\;\;\;\;\;\;\;\;21B01A0419 : ece \\ G.Jyothi sri :\;\;\;\;\;\;\;\;\;\;\; 21B01A0426 : ece }
+\date{January 28 2023}
+
+\begin{document}
+
+
+\begin{frame}
+   \titlepage
+\end{frame}
+
+\section{Problem Statement}
+\begin{frame}
+{\huge Introduction}
+\begin{itemize}
+    \item Conway's game of Life is played on an infinite two-dimensional rectangular grid of cells. 
+
+     \item These simple rules are as follows: \\
+* The cell stays alive if it has either 2 or 3 live neighbors
+
+* The cell springs to life only when it has 3 live neighbors
+
+\end{itemize}
+\end{frame}
+
+\section{}
+
+\begin{frame}{\huge Approach}
+
+\begin{itemize}
+     \item Divide and Conquer
+     \item Using rules as the base
+     \item Identifies the control flow to call the functions
+\end{itemize}
+
+\vskip 1cm
+
+\end{frame}
+
+\section{New Packages}
+
+\begin{frame}{\huge Learnings}
+
+\begin{itemize}
+\item\huge Pygame 
+\begin{itemize}
+\vskip 1cm
+\item pygame.display
+\item pygame.clock
+\item pygame.surface
+\item pygame.draw
+\item pygame.mouse
+\item pygame.events
+\end {itemize}
+\end{itemize}
+\end{frame}
+\section{}
+\begin{frame}
+{\huge Challenges}
+\begin{itemize}
+\item Choosing the right co-ordinates for elements in  grid\\ { \;-Used trail and error method}
+\item Identifying the well suited built-in function \\ {\;-Cross-checking the requirements and built-in function properties}
+\item Usage of Built-In functions \\ {\;-Acquired proper knowledge on them}
+\end{itemize}
+\end{frame}
+
+\section{}
+
+\begin{frame}{\huge Statistics}
+\begin{itemize}
+\item Number of lines : 106 lines
+\item Number of function : 6 User defined functions
+\begin{itemize}
+\item cell\_layout()
+\item layout()
+\item commands()
+\item neighbours()
+\item ResetGrid()
+\end{itemize}
+\end {itemize}
+\end{frame}
+\begin{frame}{\huge Demo}
+\begin{figure}[C:\Users\Adithya\Desktop]
+    \centering
+    \includegraphics[width=6cm]{output.png}
+    \caption{Demo output}
+    \label{fig:demo1}
+\end{figure}
+\end{frame}
+
+\subsection{}
+\begin{frame}\centering{\huge Thank you!}
+\end{frame}
+\end{document}
